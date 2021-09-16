@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Portfolio - Contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <!-- header section -->
+    <header class="main-header">
+      <div class="container">
+        <div class="main-header__brand">
+          <a href="index.html">
+            <img
+              src="logo.png"
+              alt="Logo"
+            />
+          </a>
+        </div>
+        <nav class="main-navigation">
+          <ul class="main-navigation__items">
+            <li class="main-navigation__item active">
+              <a href="index.html">Asosiy</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#">Men haqimda</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#">Xizmatlar</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#">Mijozlar</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#">Portfolio</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#">Blog</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#">Sheriklar</a>
+            </li>
+            <li class="main-navigation__item">
+              <a target="_blank" href="contact.html">Bog'lanish</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header section -->
+
+    <div class="container">
+      <section class="contact">
+        <div class="section-title">Men bilan bog'laning</div>
+        <form action="/server.php" method="GET">
+          <textarea
+            placeholder="Xabaringizni kiriting"
+            name="message"
+            cols="40"
+            rows="10"
+          ></textarea>
+          <div class="half-row contact__firstname">
+            <input
+              type="text"
+              placeholder="Ismingizni kiriting"
+              name="firstname"
+            />
+          </div>
+          <div class="half-row contact__email">
+            <input
+              type="email"
+              placeholder="Emailingizni kiriting"
+              name="email"
+            />
+          </div>
+          <input type="text" placeholder="Xat mazmuni" name="subject" />
+          <button class="button contact__send" type="submit">
+            Xabarni jo'natish
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brand">
+          <img class="footer__brend-img"
+            src="logo.png"
+            alt="brend"
+          />
+        </div>
+        <nav class="footer__navigation">
+          <ul class="footer__navigation-items">
+            <li class="footer__navigation-item">
+              <a href="#">Asosiy</a>
+            </li>
+            <li class="footer__navigation-item">
+              <a href="#about-me">Men haqimda</a>
+            </li>
+            <li class="footer__navigation-item">
+              <a href="#services">Xizmatlar</a>
+            </li>
+            <li class="footer__navigation-item">
+              <a href="#clients">Mijozlar</a>
+            </li>
+            <li class="footer__navigation-item">
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li class="footer__navigation-item">
+              <a href="#blog">Blog</a>
+            </li>
+            <li class="footer__navigation-item">
+              <a href="#partners">Sheriklar</a>
+            </li>
+            <li class="footer__navigation-item activee">
+              <a target="_blank" href="contact.html">Bog'lanish</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer__socials">
+          <li class="footer__social">
+            <a target="_blank" href="https://t.me/laziz0522">
+              <i class="fab fa-telegram"></i>
+            </a>
+          </li>
+          <li class="footer__social">
+            <a target="_blank" href="https://www.instagram.com/laziz_0522/">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="footer__text">
+          Copyright ©2021 All rights reserved | This template is made with by
+          <a target="_blank" href="https://t.me/laziz0522">Samadov Laziz</a>
+        </p>
+      </div>
+    </footer>
+    <!-- /footer section -->
+  </body>
+</html>
