@@ -1,150 +1,140 @@
 <template>
-  <div>
-    <b-row>
-      <b-colxx xxs="12">
-        <piaf-breadcrumb :heading="$t('menu.default')" />
-        <div class="separator mb-5"></div>
-      </b-colxx>
-    </b-row>
-    <b-row>
-      <b-colxx xl="6" lg="12">
-        <icon-cards-carousel></icon-cards-carousel>
-        <b-row>
-          <b-colxx md="12" class="mb-4">
-            <sales-chart-card></sales-chart-card>
-          </b-colxx>
-        </b-row>
-      </b-colxx>
-      <b-colxx lg="12" xl="6" class="mb-4">
-        <recent-orders></recent-orders>
-      </b-colxx>
-    </b-row>
-    <b-row>
-      <b-colxx lg="4" md="12" class="mb-4">
-        <product-categories-polar-area></product-categories-polar-area>
-      </b-colxx>
-      <b-colxx lg="4" md="6" class="mb-4">
-        <logs></logs>
-      </b-colxx>
-      <b-colxx lg="4" md="6" class="mb-4">
-        <tickets></tickets>
-      </b-colxx>
-    </b-row>
-    <b-row>
-      <b-colxx xl="6" lg="12" class="mb-4">
-        <calendar></calendar>
-      </b-colxx>
-      <b-colxx xl="6" lg="12" class="mb-4">
-        <best-sellers :title="$t('dashboards.best-sellers')"></best-sellers>
-      </b-colxx>
-    </b-row>
-    <b-row>
-      <b-colxx sm="12" lg="4" class="mb-4">
-        <profile-statuses></profile-statuses>
-      </b-colxx>
-      <b-colxx md="6" lg="4" class="mb-4">
-        <gradient-card>
-          <b-badge pill variant="theme-3" class="align-self-start mb-3">{{ $t('dashboards.piaf') }}</b-badge>
-          <p class="lead text-white">{{ $t('dashboards.magic-is-in-the-details') }}</p>
-          <p class="text-white">{{ $t('dashboards.yes-it-is-indeed') }}</p>
-        </gradient-card>
-      </b-colxx>
-      <b-colxx md="6" lg="4" class="mb-4">
-        <cakes></cakes>
-      </b-colxx>
-    </b-row>
-    <sortable-statictics-row></sortable-statictics-row>
-    <b-row>
-      <b-colxx sm="12" md="6" class="mb-4">
-        <website-visit-chart-card></website-visit-chart-card>
-      </b-colxx>
-      <b-colxx sm="12" md="6" class="mb-4">
-        <converconversion-rates-chart-card></converconversion-rates-chart-card>
-      </b-colxx>
-    </b-row>
-    <b-row>
-      <b-colxx lg="12" md="6" xl="4">
-        <b-row>
-          <b-colxx lg="4" xl="12" class="mb-4">
-            <gradient-with-radial-progress-card
-              icon="iconsminds-clock"
-              :title="`5 ${$t('dashboards.files')}`"
-              :detail="$t('dashboards.pending-for-print')"
-              :percent="5*100/12"
-              progressText="5/12"
+  <b-row>
+    <b-colxx xxs="12">
+      <h1>Profile</h1>
+      <b-row>
+        <b-colxx xxs="12" class="mb-5">
+          <b-card>
+            <single-lightbox
+              thumb="/assets/img/social/header.jpg"
+              large="/assets/img/social/header.jpg"
+              class-name="social-header card-img"
             />
-          </b-colxx>
-          <b-colxx lg="4" xl="12" class="mb-4">
-            <gradient-with-radial-progress-card
-              icon="iconsminds-male"
-              :title="`4 ${$t('dashboards.orders')}`"
-              :detail="$t('dashboards.on-approval-process')"
-              :percent="4*100/6"
-              progressText="4/6"
-            />
-          </b-colxx>
-          <b-colxx lg="4" xl="12" class="mb-4">
-            <gradient-with-radial-progress-card
-              icon="iconsminds-bell"
-              :title="`8 ${$t('dashboards.alerts')}`"
-              :detail="$t('dashboards.waiting-for-notice')"
-              :percent="8*100/10"
-              progressText="8/10"
-            />
-          </b-colxx>
-        </b-row>
-      </b-colxx>
-      <b-colxx lg="6" md="6" xl="4" sm="12" class="mb-4">
-        <advanced-search></advanced-search>
-      </b-colxx>
-      <b-colxx lg="6" xl="4" class="mb-4">
-        <small-line-charts itemClass="dashboard-small-chart"></small-line-charts>
-        <top-rated-items></top-rated-items>
-      </b-colxx>
-    </b-row>
-  </div>
+          </b-card>
+        </b-colxx>
+        <b-colxx xxs="12" lg="5" xl="4" class="col-left">
+          <single-lightbox
+            thumb="/assets/img/profiles/Laziz.png"
+            class-name="img-thumbnail card-img social-profile-img"
+          />
+          <b-card class="mb-4" no-body>
+            <b-card-body>
+              <div class="text-center pt-4">
+                <p class="list-item-heading pt-2">Samadov Laziz</p>
+              </div>
+              <p
+                class="mb-3"
+              >I’m a web developer. I spend my whole day, practically every day, experimenting with HTML, CSS, and JavaScript; dabbling with Python and Ruby; and inhaling a wide variety of potentially useless information through a few hundred RSS feeds. I build websites that delight and inform. I do it well.</p>
+              <p class="text-muted text-small mb-2">{{$t('pages.location')}}</p>
+              <p class="mb-3">Nairobi, Kenya</p>
+              <p class="text-muted text-small mb-2">{{$t('pages.responsibilities')}}</p>
+              <p class="mb-3">
+                <b-badge variant="outline-secondary" class="mb-1 mr-1" pill>FRONTEND</b-badge>
+                <b-badge variant="outline-secondary" class="mb-1 mr-1" pill>JAVASCRIPT</b-badge>
+                <b-badge variant="outline-secondary" class="mb-1 mr-1" pill>SECURITY</b-badge>
+                <b-badge variant="outline-secondary" class="mb-1 mr-1" pill>DESIGN</b-badge>
+              </p>
+              <p class="text-muted text-small mb-2">{{$t('menu.contact')}}</p>
+              <div class="social-icons">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <router-link to="#">
+                      <i class="simple-icon-social-facebook"></i>
+                    </router-link>
+                  </li>
+                  <li class="list-inline-item">
+                    <router-link to="#">
+                      <i class="simple-icon-social-twitter"></i>
+                    </router-link>
+                  </li>
+                  <li class="list-inline-item">
+                    <router-link to="#">
+                      <i class="simple-icon-social-instagram"></i>
+                    </router-link>
+                  </li>
+                </ul>
+              </div>
+            </b-card-body>
+          </b-card>
+
+          <b-card class="mb-4" no-body>
+            <b-card-body>
+              <b-card-title>{{$t('pages.similar-projects')}}</b-card-title>
+              <gallery-detail />
+            </b-card-body>
+          </b-card>
+
+          <b-card class="mb-4" no-body>
+            <b-card-body>
+              <b-card-title>{{$t('pages.who-to-follow')}}</b-card-title>
+              <div class="remove-last-border remove-last-margin remove-last-padding">
+                <user-follow
+                  v-for="(friend, fIndex) in followers"
+                  :data="friend"
+                  :key="`frind_${fIndex}`"
+                />
+              </div>
+            </b-card-body>
+          </b-card>
+
+          <b-card class="mb-4" no-body>
+            <b-card-body>
+              <b-card-title>{{$t('pages.recent-posts')}}</b-card-title>
+              <div class="remove-last-border remove-last-margin remove-last-padding">
+                <recent-post
+                  v-for="(post,postIndex) in recentPosts"
+                  :data="post"
+                  :key="`recent_post_${postIndex}`"
+                />
+              </div>
+            </b-card-body>
+          </b-card>
+        </b-colxx>
+        <b-colxx xxs="12" lg="7" xl="8" class="col-right">
+          <post
+            v-for="(post,postIndex) in posts"
+            :data="post"
+            :key="`post_${postIndex}`"
+            class="mb-4"
+          />
+        </b-colxx>
+      </b-row>
+    </b-colxx>
+  </b-row>
 </template>
 
 <script>
-import GradientCard from "../../../components/Cards/GradientCard";
-import GradientWithRadialProgressCard from "../../../components/Cards/GradientWithRadialProgressCard";
-import AdvancedSearch from "../../../containers/dashboards/AdvancedSearch";
-import BestSellers from "../../../containers/dashboards/BestSellers";
-import Cakes from "../../../containers/dashboards/Cakes";
-import Calendar from "../../../containers/dashboards/Calendar";
-import ConversionRatesChartCard from "../../../containers/dashboards/ConversionRatesChartCard";
-import IconCardsCarousel from "../../../containers/dashboards/IconCardsCarousel";
-import Logs from "../../../containers/dashboards/Logs";
-import Tickets from "../../../containers/dashboards/Tickets";
-import ProductCategoriesPolarArea from "../../../containers/dashboards/ProductCategoriesPolarArea";
-import ProfileStatuses from "../../../containers/dashboards/ProfileStatuses";
-import RecentOrders from "../../../containers/dashboards/RecentOrders";
-import SalesChartCard from "../../../containers/dashboards/SalesChartCard";
-import SmallLineCharts from "../../../containers/dashboards/SmallLineCharts";
-import SortableStaticticsRow from "../../../containers/dashboards/SortableStaticticsRow";
-import TopRatedItems from "../../../containers/dashboards/TopRatedItems";
-import WebsiteVisitsChartCard from "../../../containers/dashboards/WebsiteVisitsChartCard";
-
+import RecentPost from "@/components/Common/RecentPost";
+import UserCardBasic from "@/components/Cards/UserCardBasic";
+import UserFollow from "@/containers/pages/UserFollow";
+import SingleLightbox from "@/containers/pages/SingleLightbox";
+import GalleryDetail from "@/containers/pages/GalleryDetail";
+import GalleryProfile from "@/containers/pages/GalleryProfile";
+import Post from "@/containers/pages/Post";
+import produtcs from "@/data/products";
+import recentPosts from "@/data/recentPosts";
+import followers from "@/data/follow";
+import posts from "@/data/posts";
 export default {
   components: {
-    "advanced-search": AdvancedSearch,
-    "best-sellers": BestSellers,
-    cakes: Cakes,
-    calendar: Calendar,
-    "converconversion-rates-chart-card": ConversionRatesChartCard,
-    "icon-cards-carousel": IconCardsCarousel,
-    logs: Logs,
-    tickets: Tickets,
-    "product-categories-polar-area": ProductCategoriesPolarArea,
-    "profile-statuses": ProfileStatuses,
-    "recent-orders": RecentOrders,
-    "sales-chart-card": SalesChartCard,
-    "small-line-charts": SmallLineCharts,
-    "sortable-statictics-row": SortableStaticticsRow,
-    "top-rated-items": TopRatedItems,
-    "website-visit-chart-card": WebsiteVisitsChartCard,
-    "gradient-card": GradientCard,
-    "gradient-with-radial-progress-card": GradientWithRadialProgressCard
-  }
+    "single-lightbox": SingleLightbox,
+    "gallery-detail": GalleryDetail,
+    "gallery-profile": GalleryProfile,
+    "user-follow": UserFollow,
+    "recent-post": RecentPost,
+    "user-card-basic": UserCardBasic,
+    post: Post
+  },
+  data() {
+    return {
+      produtcs: produtcs.slice(0, 15),
+      recentPosts,
+      followers: followers.slice(0, 5),
+      friends: followers.slice(0),
+      posts
+    };
+  },
+  methods: {},
+  mounted() {}
 };
 </script>

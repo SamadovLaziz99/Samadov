@@ -34,25 +34,6 @@ const routes = [
               import(/* webpackChunkName: "dashboards" */ "./views/app/dashboards/Default"),
             // meta: { roles: [UserRole.Admin] },
           },
-          {
-            path: "analytics",
-
-            component: () =>
-              import(/* webpackChunkName: "dashboards" */ "./views/app/dashboards/Analytics"),
-            // meta: { roles: [UserRole.Admin] },
-          },
-          {
-            path: "ecommerce",
-            component: () =>
-              import(/* webpackChunkName: "dashboards" */ "./views/app/dashboards/Ecommerce"),
-            // meta: { roles: [UserRole.Editor] },
-          },
-          {
-            path: "content",
-            component: () =>
-              import(/* webpackChunkName: "dashboards" */ "./views/app/dashboards/Content"),
-            // meta: { roles: [UserRole.Editor] },
-          }
         ]
       },
       {
